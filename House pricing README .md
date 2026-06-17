@@ -1,10 +1,10 @@
-# 🏠 House Price Prediction — Exploratory Data Analysis & Feature Engineering
+# House Price Prediction — Exploratory Data Analysis & Feature Engineering
 
-A data science project that explores the classic [Kaggle House Prices dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) to predict residential property sale prices using exploratory analysis and feature engineering techniques.
+A data science project that explores the [Kaggle House Prices dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) to predict residential property sale prices using exploratory analysis and feature engineering techniques.
 
 ---
 
-## 📋 Project Description
+## Project Description
 
 This notebook walks through the full pre-modeling pipeline for a house price prediction task. It covers loading and inspecting the raw data, handling missing values, dropping low-signal features, engineering new predictive features, and analyzing correlations with the target variable (`SalePrice`).
 
@@ -12,7 +12,7 @@ The goal is to transform a messy, high-dimensional real estate dataset into a cl
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── House_pricing.ipynb   # Main analysis notebook
@@ -22,7 +22,7 @@ The goal is to transform a messy, high-dimensional real estate dataset into a cl
 
 ---
 
-## 🔍 Notebook Walkthrough
+## Notebook Walkthrough
 
 ### 1. Data Loading & Initial Inspection
 - Loads `train.csv` into a Pandas DataFrame
@@ -35,8 +35,8 @@ The goal is to transform a messy, high-dimensional real estate dataset into a cl
 
 ### 3. Data Cleaning
 - Drops irrelevant or heavily missing columns: `PoolQC`, `MiscFeature`, `Alley`, `Fence`, `Street`, `Utilities`, `Condition2`, `RoofMatl`, `Heating`, `LowQualFinSF`, `3SsnPorch`, `ScreenPorch`, `PoolArea`, `MiscVal`
-- Imputes missing **numerical** values with column medians
-- Imputes missing **categorical** values with `'None'`
+- Imputes missing numerical values with column medians
+- Imputes missing categorical values with `'None'`
 
 ### 4. Feature Engineering
 New features created to capture composite information:
@@ -44,8 +44,8 @@ New features created to capture composite information:
 | Feature | Description |
 |---|---|
 | `TotalSF` | Total square footage (basement + 1st floor + 2nd floor) |
-| `TotalBath` | Weighted bathroom count (full + 0.5 × half baths, above and below grade) |
-| `GarageQualCap` | Garage quality score × number of garage car spaces |
+| `TotalBath` | Weighted bathroom count (full + 0.5 x half baths, above and below grade) |
+| `GarageQualCap` | Garage quality score multiplied by number of garage car spaces |
 | `Age` | Years since last remodel (relative to 2010) |
 | `HouseAge` | Years since original construction (relative to 2010) |
 | `GarageAge` | Years since garage was built (relative to 2010) |
@@ -57,7 +57,7 @@ New features created to capture composite information:
 
 ---
 
-## 🛠️ Requirements
+## Requirements
 
 ```bash
 pip install pandas numpy matplotlib missingno
@@ -72,7 +72,7 @@ pip install pandas numpy matplotlib missingno
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Clone this repository
 2. Download `train.csv` from the [Kaggle competition page](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data) and place it in the project root
@@ -81,7 +81,7 @@ pip install pandas numpy matplotlib missingno
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 The dataset is sourced from the **Kaggle House Prices: Advanced Regression Techniques** competition. It contains 79 explanatory variables describing almost every aspect of residential homes in Ames, Iowa.
 
@@ -90,7 +90,7 @@ The dataset is sourced from the **Kaggle House Prices: Advanced Regression Techn
 
 ---
 
-## 🔮 Next Steps
+## Next Steps
 
 - Apply one-hot encoding or label encoding to categorical features
 - Train regression models (Linear Regression, Ridge, Lasso, XGBoost, etc.)
@@ -99,6 +99,6 @@ The dataset is sourced from the **Kaggle House Prices: Advanced Regression Techn
 
 ---
 
-## 📄 License
+## License
 
 This project is for educational purposes. The dataset is provided by Kaggle under their competition terms.
